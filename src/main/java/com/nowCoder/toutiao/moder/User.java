@@ -5,13 +5,17 @@ public class User {
         return name;
     }
 
+
+
+    public String name;
+    public String
+
+
     public void setName(String name) {
         this.name = name;
     }
-
-    public String name;
-
     public User(String name) {
+
         this.name = name;
     }
 }

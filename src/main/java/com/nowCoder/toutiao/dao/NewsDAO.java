@@ -4,6 +4,8 @@ import com.nowCoder.toutiao.moder.News;
 import org.jboss.logging.Param;
 import org.springframework.web.bind.annotation.PathVariable;
 
+import java.util.List;
+
 public interface NewsDAO {
     String TABLE_NAME = "news";
     String INSET_FIELDS = "title, link, image, like_count,comment_count, created_date, user_id";
@@ -13,7 +15,9 @@ public interface NewsDAO {
     int addNews(News news);
 
 
-    Lisk<News> selectByUserIdAndOffset(@Param("userId") int userId, @Param("offest") int offest,
-                                       @Param("limit") int limit);
+    @Param("userId")
+    @Param("limit")
+    @Param("offest")
+    List<News> selectByUserIdAndOffset(int userId, int offest, int limit);
 
 }
