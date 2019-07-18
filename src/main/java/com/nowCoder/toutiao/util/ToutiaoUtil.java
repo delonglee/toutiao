@@ -1,7 +1,5 @@
 package com.nowCoder.toutiao.util;
 
-import com.fasterxml.jackson.databind.util.JSONPObject;
-import com.nowCoder.toutiao.controller.LoginController;
 import org.slf4j.LoggerFactory;
 
 import java.util.Map;
@@ -13,7 +11,7 @@ public class ToutiaoUtil {
     private static final Logger logger = LoggerFactory.getLogger(ToutiaoUtil.class)
 
     public static String getJSONString(int code) {
-        JSONPObject json = new JSONPObject();
+        JSONObject json = new JSONObject();
         json.put("code", code);
         return json.toString();
     }

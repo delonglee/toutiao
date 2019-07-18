@@ -73,7 +73,7 @@ public class UserServicce {
         user = new User();
         user.setName(username);
         user.setSalt(UUID.randomUUID().toString().substring(0,5));
-        user.setHeader("http://images.nowcoder.com/head/%dt.png",new Random().nextInt(1000)))
+//        user.setHeader("http://images.nowcoder.com/head/%dt.png",new Random().nextInt(1000)))
         user.setPassword(ToutiaoUtil.MD5(password+user.getSalt()));
         userDAO.addUser(user);
     }
